@@ -4,7 +4,8 @@ droppy - jQuery nested drop-down menu
 
 == DESCRIPTION:
 
-tipsy is a simple jQuery plugin for generating Facebook-style tooltips.
+droppy creates nested drop down menus from semantic markup, by the power of
+jQuery.
 
 == HOMEPAGE:
 
