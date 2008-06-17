@@ -1,0 +1,44 @@
+droppy - jQuery nested drop-down menu
+	(c) 2008 Jason Frame (jason@onehackoranother.com)
+	Released under The MIT License.
+
+== DESCRIPTION:
+
+tipsy is a simple jQuery plugin for generating Facebook-style tooltips.
+
+== HOMEPAGE:
+
+http://onehackoranother.com/projects/jquery/droppy
+
+== SOURCE:
+
+Hosted at GitHub; browse at:
+
+  http://github.com/jaz303/droppy/tree/master
+
+Or clone from:
+
+  git@github.com:jaz303/droppy.git
+
+== USAGE:
+
+1. Copy contents of JavaScript/CSS assets to your project and include in your
+layout.
+
+2. Create your menu using semantic, nested lists:
+
+<ul id='#nav'>
+  <li><a href='#'>foo</a></li>
+  <li>
+    <a href='#'>bar</a>
+    <ul>
+      <li><a href='#'>baz</a></li>
+      <li><a href='#'>bleem</a></li>
+    </ul>
+  </li>
+</ul>
+
+3. Initialise droppy thusly: $('#nav').droppy();
+
+4. Modify configurable portion of CSS to your liking.
+
