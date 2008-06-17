@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>
+      Droppy              - Nested drop down menus          </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script type='text/javascript' src='jquery-1.2.3.min.js'></script>
+          <script type='text/javascript' src='jquery.droppy.js'></script>
+        <link rel="stylesheet" href="zero.css" type="text/css" />
+    <link rel="stylesheet" href="project-page.css" type="text/css" />
+          <link rel="stylesheet" href="droppy.css" type="text/css" />
+      </head>
+  <body>
+    <div id='container'>
+    
+      <h1>
+        Droppy                  <span class='subtitle'> - Nested drop down menus</span>
+              </h1>
+      
+      <div id='sidebar'>
+      
+                  <ul id='project-nav'>
+                          <li><a href='index.html#overview'>Overview</a></li>
+                          <li><a href='index.html#example'>Example</a></li>
+                          <li><a href='index.html#usage'>Usage</a></li>
+                          <li><a href='index.html#download'>Download</a></li>
+                          <li><a href='index.html#known-issues'>Known Issues</a></li>
+                      </ul>
+                
+        <ul id='ohoa-nav'>
+          <li><a href='http://onehackoranother.com/projects/'>Back to projects &raquo;</a></li>
+          <li><a href='http://onehackoranother.com/'>Back to onehackoranother.com &raquo;</a></li>
+        </ul>
+      
+      </div>
+      
+      <div id='main'>
+        
+
+<h2 class='first' id='overview'>Overview</h2>
+
+<p>Quick and dirty nested drop-down menu in the jQuery styleee. I needed a nav like
+  this for a recent project and a quick Googling turned up nothing that really suited,
+  so droppy was born. It hasn't been designed with flexibility in mind - if you like
+  what you see, great, integration should be a breeze - otherwise I'd look for something
+  more configurable elsewhere.</p>
+
+<h2 id='example'>Example</h2>
+
+<ul id='nav'>
+  <li><a href='index.html#'>Top level 1</a></li>
+  <li><a href='index.html#'>Top level 2</a>
+    <ul>
+      <li><a href='index.html#'>Sub 2 - 1</a></li>
+      <li>
+        <a href='index.html#'>Sub 2 - 2</a>
+        <ul>
+          <li>
+            <a href='index.html#'>Sub 2 - 2 - 1</a>
+            <ul>
+              <li><a href='index.html#'>Sub 2 - 2 - 1 - 1</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 1 - 2</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 1 - 3</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 1 - 4</a></li>
+            </ul>
+          </li>
+          <li><a href='index.html#'>Sub 2 - 2 - 2</a></li>
+          <li>
+            <a href='index.html#'>Sub 2 - 2 - 3</a>
+            <ul>
+              <li><a href='index.html#'>Sub 2 - 2 - 3 - 1</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 3 - 2</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 3 - 3</a></li>
+              <li><a href='index.html#'>Sub 2 - 2 - 3 - 4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href='index.html#'>Sub 2 - 3</a></li>
+    </ul>
+  </li>
+</ul>
+
+<script type='text/javascript'>
+  $(function() {
+    $('#nav').droppy();
+  });
+</script>
+
+<h2 id='usage'>Usage</h2>
+
+<p>No configuration options or nothin' here, just use include the Javascript/CSS
+  resources and insert the following code in your document head, or any other
+  suitable place:</p>
+  
+<div class='caption'>Javascript:</div>
+<pre>&lt;script type='text/javascript'&gt;
+  $(function() {
+    $('#nav').droppy();
+  });
+&lt;/script&gt;</pre>
+
+<p>And here's some example HTML markup:</p>
+
+<pre>&lt;ul id=&#x27;nav&#x27;&gt;
+  &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Top level 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Top level 2&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 1&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 1 - 1&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 1 - 2&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 1 - 3&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 1 - 4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 3&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 3 - 1&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 3 - 2&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 3 - 3&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 2 - 3 - 4&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Sub 2 - 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<p>The example CSS file has been split up into three small sections for ease of
+  customisation if you feel like getting your tinker on.</p>
+  
+<h2 id='download'>Download</h2>
+
+<h3>Package</h3>
+
+<p>
+	You can either
+	<a href='http://onehackoranother.com/projects/releases/droppy/latest.tgz'>download the latest release</a>
+	or <a href='http://onehackoranother.com/projects/releases/droppy/'>browse all releases</a>.
+</p>
+
+<h3>github</h3>
+<pre class='shell'><span class='green'>jason@donut</span> <span class='blue'>~ $</span> git clone git@github.com:jaz303/droppy.git</pre>
+
+<h2 id='known-issues'>Known Issues</h2>
+
+<ul>
+  <li>CSS opacity effects applied to <code>#nav ul</code> or <code>#nav li</code>
+    selectors will cumulate with each level of nesting. Workaround: apply opacity
+    effects to <code>#nav a</code> or use a 1&times;1 transparent PNG for
+    background color.</li>
+</ul>
+
+      
+      </div>
+    </div>
+  </body>
+</html>
