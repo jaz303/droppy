@@ -2,7 +2,7 @@ $.fn.droppy = function() {
   
   this.each(function() {
     
-    var root = this;
+    var root = this, zIndex = 1000;
     
     function getSubnav(ele) {
       if (ele.nodeName.toLowerCase() == 'li') {
@@ -36,7 +36,7 @@ $.fn.droppy = function() {
       var subnav = getSubnav(this);
       if (!subnav) return;
       $.data(subnav, 'cancelHide', true);
-      $(subnav).slideDown();
+      $(subnav).css({zIndex: zIndex++}).slideDown();
       if (this.nodeName.toLowerCase() == 'ul') {
         $(getActuator(this)).addClass('hover');
       }
