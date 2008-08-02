@@ -3,47 +3,44 @@
 
 <html>
   <head>
-    <title>
-      droppy              - Nested drop down menus          </title>
+    <title>droppy - Nested drop down menus</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <script type='text/javascript' src='jquery-1.2.3.min.js'></script>
-	      <script type='text/javascript' src='jquery.droppy.js'></script>
-        <link rel="stylesheet" href="zero.css" type="text/css" />
-    <link rel="stylesheet" href="project-page.css" type="text/css" />
-          <link rel="stylesheet" href="droppy.css" type="text/css" />
-          </head>
+	  <script type='text/javascript' src='assets/jquery.js'></script>
+    <link rel="stylesheet" href="assets/project-page.css" type="text/css" />
+    
+    <!-- per Project stuff -->
+      <script type='text/javascript' src='javascripts/jquery.droppy.js'></script>
+      <link rel="stylesheet" href="stylesheets/droppy.css" type="text/css" />
+    <!-- END per project stuff -->
+  
+  </head>
   <body>
     <div id='container'>
-    
       <h1>
-        droppy                  <span class='subtitle'> - Nested drop down menus</span>
-              </h1>
+        droppy
+        <span class='subtitle'> - Nested drop down menus</span>
+      </h1>
       
       <div id='sidebar'>
-      
-                  <ul id='project-nav'>
-                          <li><a href='index.html#overview'>Overview</a></li>
-                          <li><a href='index.html#example'>Example</a></li>
-                          <li><a href='index.html#usage'>Usage</a></li>
-                          <li><a href='index.html#download'>Download</a></li>
-                          <li><a href='index.html#known-issues'>Known Issues</a></li>
-                      </ul>
-                
+        <ul id='project-nav'>
+          <li><a href='#overview'>Overview</a></li>
+          <li><a href='#example'>Example</a></li>
+          <li><a href='#usage'>Usage</a></li>
+          <li><a href='#download'>Download</a></li>
+          <li><a href='#known-issues'>Known Issues</a></li>
+        </ul>
         <ul id='ohoa-nav'>
-                    <li><a href='http://onehackoranother.com/projects/'>Back to projects &raquo;</a></li>
+          <li><a href='http://onehackoranother.com/projects/'>Back to projects &raquo;</a></li>
           <li><a href='http://onehackoranother.com/'>Back to onehackoranother.com &raquo;</a></li>
         </ul>
-      
-		<a href='http://thepixeltrap.com' id='pixel-trap' title='The Pixel Trap: New Directory for Web Professionals'>
-		  <img src='pixel-16.png' alt='' /> The Pixel Trap - A New Directory for Web Professionals
-		</a>
-        
-        	
+        <a href='http://thepixeltrap.com' id='pixel-trap' title='The Pixel Trap: New Directory for Web Professionals'>
+		      <img src='http://onehackoranother.com/images/pixel-16.png' alt='' /> The Pixel Trap - A New Directory for Web Professionals
+		    </a>
       </div>
+      
       <div id='main'>
         
-
 <h2 class='first' id='overview'>Overview</h2>
 
 <p>Quick and dirty nested drop-down menu in the jQuery styleee. I needed a nav like
@@ -55,35 +52,35 @@
 <h2 id='example'>Example</h2>
 
 <ul id='nav'>
-  <li><a href='index.html#'>Top level 1</a></li>
-  <li><a href='index.html#'>Top level 2</a>
+  <li><a href='#'>Top level 1</a></li>
+  <li><a href='#'>Top level 2</a>
     <ul>
-      <li><a href='index.html#'>Sub 2 - 1</a></li>
+      <li><a href='#'>Sub 2 - 1</a></li>
       <li>
-        <a href='index.html#'>Sub 2 - 2</a>
+        <a href='#'>Sub 2 - 2</a>
         <ul>
           <li>
-            <a href='index.html#'>Sub 2 - 2 - 1</a>
+            <a href='#'>Sub 2 - 2 - 1</a>
             <ul>
-              <li><a href='index.html#'>Sub 2 - 2 - 1 - 1</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 1 - 2</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 1 - 3</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 1 - 4</a></li>
+              <li><a href='#'>Sub 2 - 2 - 1 - 1</a></li>
+              <li><a href='#'>Sub 2 - 2 - 1 - 2</a></li>
+              <li><a href='#'>Sub 2 - 2 - 1 - 3</a></li>
+              <li><a href='#'>Sub 2 - 2 - 1 - 4</a></li>
             </ul>
           </li>
-          <li><a href='index.html#'>Sub 2 - 2 - 2</a></li>
+          <li><a href='#'>Sub 2 - 2 - 2</a></li>
           <li>
-            <a href='index.html#'>Sub 2 - 2 - 3</a>
+            <a href='#'>Sub 2 - 2 - 3</a>
             <ul>
-              <li><a href='index.html#'>Sub 2 - 2 - 3 - 1</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 3 - 2</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 3 - 3</a></li>
-              <li><a href='index.html#'>Sub 2 - 2 - 3 - 4</a></li>
+              <li><a href='#'>Sub 2 - 2 - 3 - 1</a></li>
+              <li><a href='#'>Sub 2 - 2 - 3 - 2</a></li>
+              <li><a href='#'>Sub 2 - 2 - 3 - 3</a></li>
+              <li><a href='#'>Sub 2 - 2 - 3 - 4</a></li>
             </ul>
           </li>
         </ul>
       </li>
-      <li><a href='index.html#'>Sub 2 - 3</a></li>
+      <li><a href='#'>Sub 2 - 3</a></li>
     </ul>
   </li>
 </ul>
@@ -166,7 +163,6 @@
     effects to <code>#nav a</code> or use a 1&times;1 transparent PNG for
     background color.</li>
 </ul>
-
       
       </div>
     </div>
