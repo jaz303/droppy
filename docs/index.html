@@ -93,7 +93,7 @@
 
 <h2 id='usage'>Usage</h2>
 
-<p>No configuration options or nothin' here, just use include the Javascript/CSS
+<p>No mandatory configuration options or nothin' here, just use include the Javascript/CSS
   resources and insert the following code in your document head, or any other
   suitable place:</p>
   
@@ -106,6 +106,7 @@
 
 <p>And here's some example HTML markup:</p>
 
+<div class='caption'>HTML:</div>
 <pre>&lt;ul id=&#x27;nav&#x27;&gt;
   &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Top level 1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&#x27;#&#x27;&gt;Top level 2&lt;/a&gt;
@@ -140,8 +141,19 @@
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
+<p>Droppy supports a single configuration option, speed, for setting the animation time.</p>
+  
+<div class='caption'>Example with custom speed:</div>
+<pre>&lt;script type='text/javascript'&gt;
+  $(function() {
+    $('#nav').droppy({speed: 100});
+  });
+&lt;/script&gt;</pre>
+
 <p>The example CSS file has been split up into three small sections for ease of
-  customisation if you feel like getting your tinker on.</p>
+  customisation if you feel like getting your tinker on. As of version 0.1.2,
+  the 'hover' CSS class is applied to both <code>&lt;li&gt;</code> and <code>&lt;a&gt;</code>
+  tags inside the menu on rollover, improving skinability with IE6.</p>
   
 <h2 id='download'>Download</h2>
 
