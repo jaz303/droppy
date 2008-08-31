@@ -40,14 +40,16 @@ $.fn.droppy = function(options) {
       $.data(subnav, 'cancelHide', true);
       $(subnav).css({zIndex: zIndex++}).slideDown(options.speed);
       if (this.nodeName.toLowerCase() == 'ul') {
-        $(getActuator(this)).addClass('hover');
+        var li = getActuator(this);
+        $(li).addClass('hover');
+        $('> a', li).addClass('hover');
       }
     }
     
     $('ul, li', this).hover(show, hide);
     $('li', this).hover(
-      function() { $(this).addClass('hover'); },
-      function() { $(this).removeClass('hover'); }
+      function() { $(this).addClass('hover'); $('> a', this).addClass('hover'); },
+      function() { $(this).removeClass('hover'); $('> a', this).removeClass('hover'); }
     );
     
   });

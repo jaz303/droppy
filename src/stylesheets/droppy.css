@@ -22,7 +22,7 @@
   #nav li.hover a { background-color: #5E5A5A; }
   #nav ul { top: 25px; }
     #nav ul li a { background-color: #5E5A5A; }
-      #nav ul li.hover > a { background-color: #30A8C3; }
+      #nav ul a.hover { background-color: #30A8C3; }
    #nav ul a { border-bottom: 1px solid white; border-right: none; opacity: 0.9; filter: alpha(opacity=90); }
 /* #nav ul a { border-bottom: none; } - I also needed this for IE6/7 */
 
