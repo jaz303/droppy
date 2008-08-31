@@ -1,4 +1,6 @@
-$.fn.droppy = function() {
+$.fn.droppy = function(options) {
+    
+  options = $.extend({speed: 250}, options || {});
   
   this.each(function() {
     
@@ -27,7 +29,7 @@ $.fn.droppy = function() {
       $.data(subnav, 'cancelHide', false);
       setTimeout(function() {
         if (!$.data(subnav, 'cancelHide')) {
-          $(subnav).slideUp();
+          $(subnav).slideUp(options.speed);
         }
       }, 500);
     }
@@ -36,7 +38,7 @@ $.fn.droppy = function() {
       var subnav = getSubnav(this);
       if (!subnav) return;
       $.data(subnav, 'cancelHide', true);
-      $(subnav).css({zIndex: zIndex++}).slideDown();
+      $(subnav).css({zIndex: zIndex++}).slideDown(options.speed);
       if (this.nodeName.toLowerCase() == 'ul') {
         $(getActuator(this)).addClass('hover');
       }
