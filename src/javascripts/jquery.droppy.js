@@ -9,6 +9,8 @@ $.fn.droppy = function(options) {
   this.each(function() {
     
     var root = this, zIndex = 1000;
+
+    $(root).addClass('jquery-droppy');
     
     function getSubnav(ele) {
       if (ele.nodeName.toLowerCase() == 'li') {
