@@ -4,13 +4,13 @@
  */
 $.fn.droppy = function(options) {
     
-  options = $.extend({speed: 250}, options || {});
+  options = $.extend({speed: 250, className: 'droppy'}, options || {});
   
   this.each(function() {
     
     var root = this, zIndex = 1000;
 
-    $(root).addClass('jquery-droppy');
+    $(root).addClass(options.className);
     
     function getSubnav(ele) {
       if (ele.nodeName.toLowerCase() == 'li') {
