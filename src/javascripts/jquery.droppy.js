@@ -19,7 +19,7 @@ $.fn.droppy = function(options) {
       } else {
         return ele;
       }
-    }
+    };
     
     function getActuator(ele) {
       if (ele.nodeName.toLowerCase() == 'ul') {
@@ -27,7 +27,7 @@ $.fn.droppy = function(options) {
       } else {
         return ele;
       }
-    }
+    };
     
     function hide() {
       var subnav = getSubnav(this);
@@ -38,7 +38,7 @@ $.fn.droppy = function(options) {
           $(subnav).slideUp(options.speed);
         }
       }, 500);
-    }
+    };
   
     function show() {
       var subnav = getSubnav(this);
@@ -50,7 +50,7 @@ $.fn.droppy = function(options) {
         $(li).addClass('hover');
         $('> a', li).addClass('hover');
       }
-    }
+    };
     
     $('ul, li', this).hover(show, hide);
     $('li', this).hover(
