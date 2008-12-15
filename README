@@ -28,7 +28,7 @@ layout.
 
 2. Create your menu using semantic, nested lists:
 
-<ul id='#nav'>
+<ul class='nav'>
   <li><a href='#'>foo</a></li>
   <li>
     <a href='#'>bar</a>
@@ -39,7 +39,7 @@ layout.
   </li>
 </ul>
 
-3. Initialise droppy thusly: $('#nav').droppy();
+3. Initialise droppy thusly: $('.nav').droppy();
 
 4. Modify configurable portion of CSS to your liking.
 
