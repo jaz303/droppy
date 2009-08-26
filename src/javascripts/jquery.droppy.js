@@ -53,9 +53,16 @@
 	        $('> a', li).addClass('hover');
 	      }
 	    };
-
-	    $('ul, li', this).hover(show, hide);
-	    $('li', this).hover(
+	    
+	    if (typeof $.fn.hoverIntent == 'function') {
+	        $('ul, li', this).hoverIntent($.extend({
+	            sensitivity: 2, interval: 50, timeout: 100
+	        }, options.hoverIntent || {}, {over: show, out: hide}));
+	    } else {
+	        $('ul, li', this).hover(show, hide);
+	    }
+	    
+        $('li', this).hover(
 	      function() { $(this).addClass('hover'); $('> a', this).addClass('hover'); },
 	      function() { $(this).removeClass('hover'); $('> a', this).removeClass('hover'); }
 	    );
