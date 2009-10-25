@@ -13,6 +13,7 @@
       var root = this, zIndex = 1000;
 
       $(root).addClass(options.className);
+			$(root).find('li:has(> ul) > a').addClass('has-subnav');
 
       function getSubnav(ele) {
         if (ele.nodeName.toLowerCase() == 'li') {
