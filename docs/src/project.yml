@@ -1,0 +1,12 @@
+project:
+    title: "droppy"
+    subtitle: "Nested drop down menus"
+    jquery_version: "1.2.3"
+    main_nav:
+        - ["Overview", "#overview"]
+        - ["Example", "#example"]
+        - ["Usage", "#setup"]
+        - ["Download", "#download"]
+        - ["Known Issues", "#known-issues"]
+    stylesheets: ['stylesheets/droppy.css']
+    javascripts: ['javascripts/jquery.droppy.js']
