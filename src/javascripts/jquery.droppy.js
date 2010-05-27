@@ -6,7 +6,7 @@
   
   $.fn.droppy = function(options) {
 
-    options = $.extend({speed: 250, className: 'droppy'}, options || {});
+    options = $.extend({speed: 250, className: 'droppy', trigger: 'hover'}, options || {});
 
     this.each(function() {
 
@@ -53,17 +53,23 @@
           $(li).addClass('hover');
           $('> a', li).addClass('hover');
         }
+        return false;
       };
       
-      if (typeof $.fn.hoverIntent == 'function') {
-          $('ul, li', this).hoverIntent($.extend({
-              sensitivity: 2, interval: 50, timeout: 100
-          }, options.hoverIntent || {}, {over: show, out: hide}));
+      if (options.trigger == 'click') {
+        $('ul, li', this).click(show);
+        $('ul, li', this).hover(function() {}, hide);
       } else {
+        if (typeof $.fn.hoverIntent == 'function') {
+          $('ul, li', this).hoverIntent($.extend({
+            sensitivity: 2, interval: 50, timeout: 100
+          }, options.hoverIntent || {}, {over: show, out: hide}));
+        } else {
           $('ul, li', this).hover(show, hide);
+        }
       }
       
-        $('li', this).hover(
+      $('li', this).hover(
         function() { $(this).addClass('hover'); $('> a', this).addClass('hover'); },
         function() { $(this).removeClass('hover'); $('> a', this).removeClass('hover'); }
       );
