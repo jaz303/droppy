@@ -57,7 +57,8 @@
       };
       
       if (options.trigger == 'click') {
-        $('ul, li', this).click(show);
+        $('> li', this).click(show);
+        $('> li ul, > li li', this).hover(show, function() {});
         $('ul, li', this).hover(function() {}, hide);
       } else {
         if (typeof $.fn.hoverIntent == 'function') {
