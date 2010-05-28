@@ -57,7 +57,11 @@
       };
       
       if (options.trigger == 'click') {
-        $('> li', this).click(show);
+        $('> li', this).click(function(evt) {
+          if (evt.target == this || evt.target.parentNode == this) {
+            show.call(this);
+          }
+        });
         $('> li ul, > li li', this).hover(show, function() {});
         $('ul, li', this).hover(function() {}, hide);
       } else {
